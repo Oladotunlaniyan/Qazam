@@ -3,7 +3,7 @@ import { Song } from '../types/Song';
 import { getMockSongs } from '../utils/mockData'; // Keep for fallback
 import io, { Socket } from 'socket.io-client';
 
-const BACKEND_URL = 'http://localhost:7070'; // Change this if your backend is on a different URL
+const BACKEND_URL = 'http://localhost:5000'; 
 
 const useSongRecognition = () => {
   const [isRecognizing, setIsRecognizing] = useState(false);
