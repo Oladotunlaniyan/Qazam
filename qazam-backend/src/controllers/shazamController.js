@@ -5,7 +5,7 @@ const path = require('path');
 const FormData = require('form-data');
 const fetch = require('node-fetch');
 
-// In-memory history storage (in a production app, you'd use a database)
+
 let songHistory = [];
 
 // Helper function to clean up temporary files

@@ -1,8 +1,5 @@
-// src/utils/errorHandler.js
+// Custom error class for API errors
 
-/**
- * Custom error class for API errors
- */
 class ApiError extends Error {
     constructor(message, statusCode) {
       super(message);
@@ -14,17 +11,11 @@ class ApiError extends Error {
     }
   }
   
-  /**
-   * Handle 404 not found error
-   */
   const notFound = (req, res, next) => {
     const error = new ApiError(`Not Found - ${req.originalUrl}`, 404);
     next(error);
   };
   
-  /**
-   * Handle async function errors
-   */
   const asyncHandler = (fn) => (req, res, next) =>
     Promise.resolve(fn(req, res, next)).catch(next);
   
